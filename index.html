@@ -4,6 +4,7 @@
 	<title>JSON Practice</title>
 </head>
 <body>
+	<ul id="people"></ul>
 	<script type="text/javascript">
 		var person = {
 			name: "Waswa Rodgers",
@@ -46,11 +47,18 @@
 		console.log(people[1]) //returns second object
 		console.log(people[1].email) //returns damarys@gmail.com
 
+		var output = '';
+
 		for(var i = 0; i < people.length; i++) {
 			//console.log(people[i])
 			console.log(people[i].name)
 			console.log(people[i].email)
+
+			output += '<li>'+people[i].name+' and '+people[i].email+'</li>';
+
 		}
+
+		document.getElementById("people").innerHTML = output;
 
 
 	</script>
