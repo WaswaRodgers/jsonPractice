@@ -24,6 +24,10 @@
 		person = JSON.parse(person) //convert JSON to JS Object
 		console.log(person.name)
 
+		for(var n = 0; n < person.children.length; n++) {
+			console.log(person.children[n]) //returns Brian and Sheilla
+		}
+
 		var people = [
 			{
 				name: "Waswa",
@@ -41,6 +45,12 @@
 
 		console.log(people[1]) //returns second object
 		console.log(people[1].email) //returns damarys@gmail.com
+
+		for(var i = 0; i < people.length; i++) {
+			//console.log(people[i])
+			console.log(people[i].name)
+			console.log(people[i].email)
+		}
 
 
 	</script>
