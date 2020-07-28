@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON Practice</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var person = {
+			name: "Waswa Rodgers",
+			email:"waswam2014@gmail.com",
+			city:"Kisumu",
+			address: {
+				street: "Kangemi",
+				house: "George"
+			},
+			children: ["Brian", "Sheilla"]
+		}
+
+		console.log(person) //access object
+		console.log(person.address.street) // Kangemi
+		console.log(person.children[0]) // Brian
+
+		person = JSON.stringify(person) // convert JS Object to JSON
+		person = JSON.parse(person) //convert JSON to JS Object
+		console.log(person.name)
+
+		var people = [
+			{
+				name: "Waswa",
+				email: "waswam2014@gmail.com"
+			},
+			{
+				name: "Isaac",
+				email: "isaac@gmail.com",
+			},
+			{
+				name: "Damarys",
+				email: "damarys@gmail.com"
+			}
+		]
+
+		console.log(people[1]) //returns second object
+		console.log(people[1].email) //returns damarys@gmail.com
+
+
+	</script>
+</body>
+</html>
